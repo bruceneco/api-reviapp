@@ -1,8 +1,8 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from "typeorm";
 
-@Entity('student')
-export class ReviewsEntity {
-    @PrimaryGeneratedColumn('uuid')
+@Entity('review')
+export class ReviewEntity {
+    @PrimaryGeneratedColumn()
     id: number;
     
     @CreateDateColumn()
@@ -14,7 +14,7 @@ export class ReviewsEntity {
     @Column('text')
     subject: string;
 
-    @Column()
+    @CreateDateColumn()
     nextReview: Date;
 
     @Column()
